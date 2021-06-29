@@ -12,7 +12,8 @@ function setup() {
   world = engine.world;
 
   ball = new Ball(200, 200, 80, 80);
-//
+  rope=new Rope(ball.body,{x:200,y:50})
+  //
 
 }
 
@@ -26,5 +27,5 @@ function draw() {
 }
 
 function mouseDragged() {
-  Matter.Body.setPosition(x,y);
+  Matter.Body.setPosition(ball.body,{x:mouseX,y:mouseY);
 }
